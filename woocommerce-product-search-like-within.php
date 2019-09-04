@@ -23,7 +23,7 @@ class WooCommerce_Product_Search_Like_Within {
 	 * Adds the woocommerce_product_search_like_within filter.
 	 */
 	public static function boot() {
-		add_filter( 'woocommerce_product_search_like_within', 'enable_wps_search_like_within', 10, 3 );
+		add_filter( 'woocommerce_product_search_like_within', array( __CLASS__, 'enable_wps_search_like_within' ), 10, 3 );
 	}
 
 	/**
